@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using TMPro;
+using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class GameplayManager : MonoBehaviour
 
     public Level[] level;
 
+    public Text scoreCountText, scoreCountMaxText;
+    public TextMeshProUGUI roundCompleted;
+
     private void Awake()
     {
         instance = this;
@@ -28,6 +33,7 @@ public class GameplayManager : MonoBehaviour
 
     private void Update()
     {
+        TextHolder();
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (_score >= level[levelNum].scoreMax)
         {
@@ -42,12 +48,16 @@ public class GameplayManager : MonoBehaviour
 
    IEnumerator UpgradeThePlayer()
     {
+        roundCompleted.gameObject.SetActive(true);
+        roundCompleted.text = "Волна" + (levelNum + 1) + "Пройдена!";
+        
         _score = 0;
         levelNum++;
         GameObject.FindWithTag("Player").GetComponent<Shooting>().currentWeapon = level[levelNum].weapon;
         DestroyAllEnemies();
         spawn = false;
         yield return new WaitForSeconds(2);
+        roundCompleted.gameObject.SetActive(false);
         spawn = true;
     }
 
@@ -57,5 +67,11 @@ public class GameplayManager : MonoBehaviour
         {
             Destroy(enemies[i].gameObject);
         }
+    }
+
+    void TextHolder()
+    {
+        scoreCountText.text = _score.ToString();
+        scoreCountMaxText.text = level[levelNum].scoreMax.ToString();
     }
 }

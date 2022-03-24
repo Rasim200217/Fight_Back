@@ -445,8 +445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _moveSpeed: 5
-  _health: 10
+  _moveSpeed: 15
+  _health: 80
+  scoreReward: 1
 --- !u!50 &6513803429589759132
 Rigidbody2D:
   serializedVersion: 4
