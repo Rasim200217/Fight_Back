@@ -49,7 +49,7 @@ public class GameplayManager : MonoBehaviour
    IEnumerator UpgradeThePlayer()
     {
         roundCompleted.gameObject.SetActive(true);
-        roundCompleted.text = "Волна" + (levelNum + 1) + "Пройдена!";
+        roundCompleted.text = "Волна " + (levelNum + 1) + " Пройдена!";
         
         _score = 0;
         levelNum++;
