@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour
@@ -33,6 +34,7 @@ public class GameplayManager : MonoBehaviour
 
     private void Update()
     {
+    
         TextHolder();
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (_score >= level[levelNum].scoreMax)
@@ -50,15 +52,21 @@ public class GameplayManager : MonoBehaviour
     {
         roundCompleted.gameObject.SetActive(true);
         roundCompleted.text = "Волна " + (levelNum + 1) + " Пройдена!";
-        
-        _score = 0;
-        levelNum++;
-        GameObject.FindWithTag("Player").GetComponent<Shooting>().currentWeapon = level[levelNum].weapon;
-        DestroyAllEnemies();
-        spawn = false;
-        yield return new WaitForSeconds(2);
-        roundCompleted.gameObject.SetActive(false);
-        spawn = true;
+
+        if (level == null) 
+        {
+            SceneManager.LoadScene(1);
+            spawn = false;
+        }
+   
+            _score = 0;
+            levelNum++;
+            GameObject.FindWithTag("Player").GetComponent<Shooting>().currentWeapon = level[levelNum].weapon;
+            DestroyAllEnemies();
+            spawn = false;
+            yield return new WaitForSeconds(2);
+            roundCompleted.gameObject.SetActive(false);
+            spawn = true;
     }
 
     void DestroyAllEnemies()

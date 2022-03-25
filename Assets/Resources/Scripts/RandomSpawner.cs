@@ -31,6 +31,7 @@ public class RandomSpawner : MonoBehaviour
 
         yield return new WaitForSeconds(_time);
         StartCoroutine(SpawnEnemy());
+        
 
     }
 }
