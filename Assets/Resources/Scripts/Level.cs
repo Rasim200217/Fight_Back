@@ -6,5 +6,5 @@ using UnityEngine;
 public class Level 
 {
     public int scoreMax;
-    public Weapon weapon;
+   // public Weapon weapon;
 }

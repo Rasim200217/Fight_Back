@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a05fffd389f4542a4a363b61f7bda0, type: 3}
   m_Name: Fire1 1
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 21300000, guid: 4bfec70ae8128f44b9fa046bd03223e7, type: 3}
+  currentWeapon: {fileID: -1645174211, guid: da39317276a54b64db7c19567934be75, type: 3}
   bulletPrefab: {fileID: 1676126429648856949, guid: 8fadb619d6e46804a993cf719c07e035,
     type: 3}
   fireRate: 4

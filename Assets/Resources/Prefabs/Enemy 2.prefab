@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _moveSpeed: 15
+  _moveSpeed: 5
   _health: 100
   scoreReward: 3
 --- !u!50 &1914865605852501430

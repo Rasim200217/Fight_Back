@@ -37,6 +37,10 @@ public class Controller : MonoBehaviour
         float y = Input.GetAxis("Vertical");
         
         _rigidbody2D.velocity = new Vector2(x, y) * _speed;
+
+
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -35f, 35f),
+            Mathf.Clamp(transform.position.y, -19f, 19f));
     }
 
     private void CursorRotate()

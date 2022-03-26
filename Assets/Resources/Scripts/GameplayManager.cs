@@ -61,7 +61,7 @@ public class GameplayManager : MonoBehaviour
    
             _score = 0;
             levelNum++;
-            GameObject.FindWithTag("Player").GetComponent<Shooting>().currentWeapon = level[levelNum].weapon;
+          //  GameObject.FindWithTag("Player").GetComponent<Shooting>().currentWeapon = level[levelNum].weapon;
             DestroyAllEnemies();
             spawn = false;
             yield return new WaitForSeconds(2);

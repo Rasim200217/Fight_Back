@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a05fffd389f4542a4a363b61f7bda0, type: 3}
   m_Name: Fire 2
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 21300000, guid: 658b7ac7c5e29644bbde948cfbee305b, type: 3}
+  currentWeapon: {fileID: -1799590829, guid: da39317276a54b64db7c19567934be75, type: 3}
   bulletPrefab: {fileID: 8323107704916813785, guid: 00914ad2f84d556478f40031acf839c5,
     type: 3}
-  fireRate: 3
-  damage: 40
+  fireRate: 1
+  damage: 35

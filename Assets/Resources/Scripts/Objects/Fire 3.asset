@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5a05fffd389f4542a4a363b61f7bda0, type: 3}
-  m_Name: Fire1
+  m_Name: Fire 3
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: -1137402055, guid: da39317276a54b64db7c19567934be75, type: 3}
-  bulletPrefab: {fileID: 3892323690093005229, guid: cf6e44cdae6c61a46852bf7fda50d0dc,
+  currentWeapon: {fileID: -1921807193, guid: da39317276a54b64db7c19567934be75, type: 3}
+  bulletPrefab: {fileID: 790505029169973656, guid: 678f0c73c1fdc994b8aec9022ddfb943,
     type: 3}
-  fireRate: 2
-  damage: 20
+  fireRate: 0.5
+  damage: 50
